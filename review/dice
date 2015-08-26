@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+
+sides = []
+
+sides.append('''
+ ------
+|      |
+|  一  |
+|     1|
+ ------
+''')
+
+sides.append('''
+ ------
+|      |
+|  二  |
+|     2|
+ ------
+''')
+
+sides.append('''
+ ------
+|      |
+|  三  |
+|     3|
+ ------
+''')
+
+sides.append('''
+ ------
+|      |
+|  四  |
+|     4|
+ ------
+''')
+
+sides.append('''
+ ------
+|      |
+|  五  |
+|     5|
+ ------
+''')
+
+sides.append('''
+ ------
+|      |
+|  六  |
+|     6|
+ ------
+''')
+
+num = 1
+try:
+    while True:
+        side = random.choice(sides)
+        print(c.clear + c.random_color() + side + c.reset)
+        input()
+
+except KeyboardInterrupt:
+    exit(0)
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+
+print(c.clear + c.blue + "Welcome to Mad Libs" + c.reset)
+
+text= '''Under The Sea
+
+Look at this {Noun1}, isn`t it neat?
+Wouldn`t you think my collection`s complete?
+Wouldn`t you think I`m the {Noun2}
+The {Noun2} who has everything?
+
+Look at this {Noun3} , treasures untold
+How many wonders can one {Noun4} hold?
+{Verb Ending In -ing1} around here, you`d think
+Sure, she`s got everything
+
+I`ve got {Plural Noun1} and {Plural Noun2} a-plenty
+I`ve got who`s-its and what`s-its galore
+You {Verb1} thing-a-mabobs?
+I`ve got {Number}
+But who cares? No {Adjective1} deal. I {Verb2} more
+
+I wanna be where the {Plural Noun3} are
+I wanna see, wanna see `em {Verb Ending In -ing2}
+walkin` around on those
+Whaddya call `em? Oh, feet
+
+{Verb Ending In -ing3} your fins, you don`t get too far
+Legs are required for {Verb Ending In -ing4}, dancin`
+Strollin` along down the
+What`s that word again? {Noun5}
+Up where {Plural Noun4} Favor
+Up where {Plural Noun4}
+Up where {Plural Noun4} stay all day in the sun
+Wanderin` free, wish I could be
+Part of that {Noun6}
+
+What would I give if I could live
+Outta these {Plural Noun5}?
+What would I pay to spend a day
+Warm on the sand?
+
+Betcha on {Place} they understand
+Bet they don`t reprimand their {Plural Noun6}
+Bright young women, sick of {Verb Ending In -ing5}
+Ready to stand
+
+And ready to know what the {Noun7} know
+Ask `em {Adjective2} questions and get some answers
+What`s a {Noun8}, and why does it
+What`s the word? {Verb3}
+
+When`s it my turn?
+Wouldn`t I {Verb4}?
+{Verb4} to explore that {Noun9} up above
+Out of {Adjective3} {Noun10}, wish {Noun11} could be
+{Verb5} of that {Noun12}
+'''
+
+text_lines = text.splitlines()
+title = text_lines[0]
+text = "\n ".join(text_lines[1:])
+
+words = {
+    "Noun1" : None,
+    "Noun2" : None,
+    "Noun3" : None,
+    "Noun4" : None,
+    "Verb Ending In -ing1" : None,
+    "Plural Noun1" : None,
+    "Plural Noun2" : None,
+    "Verb1" : None,
+    "Number" : None,
+    "Adjective1" : None,
+    "Verb2" : None,
+    "Plural Noun3" : None,
+    "Verb Ending In -ing2" : None,
+    "Verb Ending In -ing3" : None,
+    "Verb Ending In -ing4" : None,
+    "Noun5" : None,
+    "Plural Noun4" : None,
+    "Noun6" : None,
+    "Plural Noun5" : None,
+    "Place" : None,
+    "Plural Noun6" : None,
+    "Verb Ending In -ing5" : None,
+    "Noun7" : None,
+    "Adjective2" : None,
+    "Noun8" : None,
+    "Verb3" : None,
+    "Verb4" : None,
+    "Noun9" : None,
+    "Adjective3" : None,
+    "Noun10" : None,
+    "Noun11" : None,
+    "Verb5" : None,
+    "Noun12" : None
+}
+
+for key in words:
+    words[key] = c.red + ask(key.rstrip('0123456789') + ': ') + c.reset
+
+print(c.base3 + title + c.reset)
+print(text.format(**words))

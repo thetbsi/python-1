@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+turtle.forward(5)
+turtle.rt(6)
+turtle.back(5)
+turtle.left(6)
+

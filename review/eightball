@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+
+print(c.clear)
+print(c.yellow + '''
+Welcome to magic eightball
+Type your question below
+''' + c.reset)
+
+answers = [
+    c.green + 'yes' + c.reset,
+    c.red + 'no' + c.reset,
+    c.base01 + 'maybe' + c.reset
+]
+
+try:
+
+    while True:
+      question = input('> ' + c.yellow)
+      answer = random.choice(answers)
+      print(answer)
+
+except KeyboardInterrupt:
+    print()
+    print("Fine.Bye")
+    exit()
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+
+print(c.red + '''
+Welcome to magic eight ball!
+Enter your questions below.
+''' + c.reset)
+
+answers = [
+    'yes.',
+    'no.',
+    'maybe.',
+    'it is certain.',
+    'reply hazy, try again later',
+    'do not count on it',
+    'focus nd ask again',
+    'do not ask me i am a ball',
+    'not in a million years',
+    'wait what',
+    'what ever you think',
+    'outlook not so good',
+    'very doubtful',
+    'processing data',
+    'is this a magic show',
+    'are you thinking straight',
+    'in your dreams',
+    'just google it',
+    'i need a party first',
+    'go to your happy place'
+]
+
+try:    
+    while True:
+        question = input('> ' + c.yellow)
+        if question == 'bye' or question == 'goodbye':
+            print("Ok,bye")
+            exit()
+        elif 'die' in question or 'death' in question or 'dead' in question:
+            print(c.random_color() + "such a horrid question you won't get an answer yet" + c.reset)
+        else:
+            answer = random.choice(answers)
+            print(c.random_color() + answer + c.reset)
+
+except KeyboardInterrupt:
+    print()
+    print("Ok, Bye.")
+    exit()
+

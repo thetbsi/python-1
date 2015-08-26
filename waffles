@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.clear + c.random_color() + "do you like waffles?" + c.reset)
+answer = input("> ").strip().lower()
+if answer == "yes":
+    print(c.clear + c.random_color() + "do you like pancakes?" + c.reset)
+    answer = input("> ")
+    if answer == "yes":
+        print(c.clear + c.random_color() + "do you like french toast?" + c.reset)
+        answer = input("> ")
+        if answer == "yes":
+            print (c.clear + c.random_color() + "Do, do da do, can't wait to get a mouthful!" + c.reset)
+        else:
+            print("Well i like french toast")
+    else:
+        print("Well i like pancakes")
+else:
+    print("Well i like waffles")
+
+
+
+
+
