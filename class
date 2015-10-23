@@ -1,0 +1,6 @@
+#!/usr/bine/env python3
+
+import skilstak.colors as c
+import random
+
+print(c.rc() + "Hello Class" + c.x)
