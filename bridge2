@@ -2,5 +2,3 @@
 
 import skilstak.colors as c
 
-while True:
-    print(c.rc() + "Hello Class" + c.x)
