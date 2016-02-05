@@ -2,3 +2,12 @@
 
 import skilstak.colors as c
 
+print(c.clear + c.yellow + '''
+Who shall cross the Brige of Death
+Must answer me these three
+'Ere the other side he see.
+''' + c.reset 
+
+print(c.red + "What is your name?" + c.reset
+name = input("> " + c.base3)
+print(c.reset)
