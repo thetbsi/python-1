@@ -8,4 +8,4 @@ import random
 
 
 while True:
-    print(c.random_color() + '( ͡° ͜ʖ ͡°)', end=' ')
+    print(c.random_color() + '8~[>_<]~8 ', end=' ')
